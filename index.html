@@ -7,10 +7,30 @@
   <title>Library</title>
   <meta name="description" content="Project: Library">
   <meta name="author" content="ChristopherLiu">
+
+  <script src="script.js"></script>
 </head>
 
 <body>
 
+  <form>
+    <label for="bookTitle">Title</label>
+    <input id="bookTitle" type="text">
+
+    <label for="bookAuthor">Author</label>
+    <input id="bookAuthor" type="text">
+
+    <label for="bookPages">Number of Pages</label>
+    <input id="bookPages" type="text">
+
+    <label for="bookReadStatusTrue">Already Read</label>
+    <input id="bookReadStatusTrue" type="radio" name="bookReadStatus" value="true">
+
+    <label for="bookReadStatusFalse">Not Read Yet</label>
+    <input id="bookReadStatusFalse" type="radio" name="bookReadStatus" value="false">
+
+    <input type="button">
+  </form>
 
 </body>
 </html>
