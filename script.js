@@ -36,10 +36,11 @@ function populateBookCardsHolder(libraryArray) {
         bookCardsHolder.removeChild(bookCardsHolder.firstChild);
     }
 
-    libraryArray.forEach(book => {
+    libraryArray.forEach((book, index) => {
 
         let bookCard = document.createElement('div');
         bookCard.classList.add('bookCard');
+        bookCard.classList.add(index);
 
         let bookCardTitle = document.createElement('p');
         bookCardTitle.textContent = book.title;
