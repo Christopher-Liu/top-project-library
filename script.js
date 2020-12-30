@@ -31,6 +31,11 @@ function populateBookCardsHolder(libraryArray) {
     
     let bookCardsHolder = document.querySelector(".bookCards");
 
+    // Clear out existing book cards before re-populating 
+    while (bookCardsHolder.firstChild) {
+        bookCardsHolder.removeChild(bookCardsHolder.firstChild);
+    }
+
     libraryArray.forEach(book => {
 
         let bookCard = document.createElement('div');
