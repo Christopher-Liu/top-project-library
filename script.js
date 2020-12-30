@@ -13,3 +13,18 @@ Book.prototype.info = function info() {
 };
 
 
+// Placeholder function for functionality to add a new book
+function addBookToLibrary() {
+
+    let newBookTitle = document.getElementById("bookTitle").value;
+    let newBookAuthor = document.getElementById("bookAuthor").value;
+    let newBookPages = document.getElementById("bookPages").value;
+    let newBookRead = document.getElementById("bookReadStatusTrue").checked;
+
+    let newBook = new Book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
+
+    
+    
+}
+
+
