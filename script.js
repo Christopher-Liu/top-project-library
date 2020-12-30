@@ -62,6 +62,15 @@ function populateBookCardsHolder(libraryArray) {
         bookCardRead.classList.add('bookCardRead');
         bookCard.appendChild(bookCardRead);
 
+        let bookCardRemoveButton = document.createElement('button');
+        bookCardRemoveButton.textContent = "Remove book";
+        bookCardRemoveButton.classList.add('bookCardRemoveButton');
+        bookCardRemoveButton.addEventListener('click', () => {
+            myLibrary.splice(index, 1);
+            populateBookCardsHolder(myLibrary);
+        });
+        bookCard.appendChild(bookCardRemoveButton);
+
 
         bookCardsHolder.appendChild(bookCard);
     });
