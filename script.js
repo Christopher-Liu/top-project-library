@@ -13,8 +13,7 @@ Book.prototype.info = function info() {
 };
 
 
-// Placeholder function for functionality to add a new book
-function addBookToLibrary() {
+function addBookToLibrary(libraryArray) {
 
     let newBookTitle = document.getElementById("bookTitle").value;
     let newBookAuthor = document.getElementById("bookAuthor").value;
@@ -23,8 +22,47 @@ function addBookToLibrary() {
 
     let newBook = new Book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
 
-    
-    
+    libraryArray.push(newBook);
+
 }
 
+
+function populateBookCardsHolder(libraryArray) {
+    
+    let bookCardsHolder = document.querySelector(".bookCards");
+
+    libraryArray.forEach(book => {
+
+        let bookCard = document.createElement('div');
+        bookCard.classList.add('bookCard');
+
+        let bookCardTitle = document.createElement('p');
+        bookCardTitle.textContent = book.title;
+        bookCardTitle.classList.add('bookCardTitle');
+        bookCard.appendChild(bookCardTitle);
+
+        let bookCardAuthor = document.createElement('p');
+        bookCardAuthor.textContent = book.author;
+        bookCardAuthor.classList.add('bookCardAuthor');
+        bookCard.appendChild(bookCardAuthor);
+
+        let bookCardPages = document.createElement('p');
+        bookCardPages.textContent = book.pages;
+        bookCardPages.classList.add('bookCardPages');
+        bookCard.appendChild(bookCardPages);
+
+        let bookCardRead = document.createElement('p');
+        bookCardRead.textContent = book.read ? "Already read" : "Not Read Yet";
+        bookCardRead.classList.add('bookCardRead');
+        bookCard.appendChild(bookCardRead);
+
+
+        bookCardsHolder.appendChild(bookCard);
+    });
+}
+
+document.getElementById("formSubmitButton").addEventListener('click', () => {
+    addBookToLibrary(myLibrary);
+    populateBookCardsHolder(myLibrary);
+});
 
