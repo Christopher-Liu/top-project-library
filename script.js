@@ -18,7 +18,7 @@ function addBookToLibrary(libraryArray) {
     let newBookTitle = document.getElementById("bookTitle").value;
     let newBookAuthor = document.getElementById("bookAuthor").value;
     let newBookPages = document.getElementById("bookPages").value;
-    let newBookRead = document.getElementById("bookReadStatusTrue").checked;
+    let newBookRead = (document.getElementById("bookReadStatus").value === "true") ? true : false; 
 
     let newBook = new Book(newBookTitle, newBookAuthor, newBookPages, newBookRead);
 
