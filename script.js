@@ -93,3 +93,10 @@ document.getElementById("formSubmitButton").addEventListener('click', () => {
     populateBookCardsHolder(myLibrary);
 });
 
+
+
+
+// Start webpage with existing book cards
+myLibrary.push(new Book('The Great Gatsby', 'F. Scott Fitzgerald', '218', true));
+myLibrary.push(new Book('1984', 'George Orwell', '328', false));
+populateBookCardsHolder(myLibrary);
