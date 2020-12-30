@@ -1,0 +1,9 @@
+.bookCards{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.bookCard{
+    display: block;
+}
