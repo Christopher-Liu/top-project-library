@@ -62,6 +62,22 @@ function populateBookCardsHolder(libraryArray) {
         bookCardRead.classList.add('bookCardRead');
         bookCard.appendChild(bookCardRead);
 
+        let bookCardReadStatusButton = document.createElement('button');
+        bookCardReadStatusButton.textContent = book.read ? "Mark Unread" : "Mark Read";
+        bookCardReadStatusButton.classList.add('bookCardReadStatusButton');
+        bookCardReadStatusButton.addEventListener('click', () => {
+            if (book.read) {
+                book.read = false;
+                bookCardReadStatusButton.textContent = "Mark Read";
+            } else {
+                book.read = true;
+                bookCardReadStatusButton.textContent = "Mark Unread"
+            }
+
+            populateBookCardsHolder(myLibrary);
+        });
+        bookCard.appendChild(bookCardReadStatusButton);
+
         let bookCardRemoveButton = document.createElement('button');
         bookCardRemoveButton.textContent = "Remove book";
         bookCardRemoveButton.classList.add('bookCardRemoveButton');
