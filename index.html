@@ -29,11 +29,11 @@
     <label for="bookPages">Number of Pages</label>
     <input id="bookPages" type="text">
 
-    <label for="bookReadStatusTrue">Already Read</label>
-    <input id="bookReadStatusTrue" type="radio" name="bookReadStatus" value="true">
-
-    <label for="bookReadStatusFalse">Not Read Yet</label>
-    <input id="bookReadStatusFalse" type="radio" name="bookReadStatus" value="false">
+    <label for="bookReadStatus">Already Read?</label>
+    <select id="bookReadStatus" name="bookReadStatus">
+      <option value="true">Read</option>
+      <option value="false">Not Read</option>
+    </select>
 
     <button type="button" id="formSubmitButton">Submit</button>
   </form>
