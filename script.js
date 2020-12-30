@@ -76,6 +76,18 @@ function populateBookCardsHolder(libraryArray) {
     });
 }
 
+
+document.getElementById("addBookButton").addEventListener('click', () => { 
+    if (document.querySelector(".newBookForm").hidden) {
+        document.querySelector(".newBookForm").hidden = false;
+        document.getElementById("addBookButton").textContent = "Hide Form";
+    } else {
+        document.querySelector(".newBookForm").hidden = true;
+        document.getElementById("addBookButton").textContent = "Add Book to List";
+    }
+});
+
+
 document.getElementById("formSubmitButton").addEventListener('click', () => {
     addBookToLibrary(myLibrary);
     populateBookCardsHolder(myLibrary);
