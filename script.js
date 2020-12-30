@@ -77,6 +77,7 @@ function populateBookCardsHolder(libraryArray) {
 }
 
 
+// Functionality to display/hide new book form
 document.getElementById("addBookButton").addEventListener('click', () => { 
     if (document.querySelector(".newBookForm").hidden) {
         document.querySelector(".newBookForm").hidden = false;
@@ -96,7 +97,8 @@ document.getElementById("formSubmitButton").addEventListener('click', () => {
 
 
 
-// Start webpage with existing book cards
+// Default webpage with existing book cards and hidden form
+document.querySelector(".newBookForm").hidden = true;
 myLibrary.push(new Book('The Great Gatsby', 'F. Scott Fitzgerald', '218', true));
 myLibrary.push(new Book('1984', 'George Orwell', '328', false));
 populateBookCardsHolder(myLibrary);
