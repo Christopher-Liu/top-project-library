@@ -13,31 +13,34 @@
 </head>
 
 <body>
+  <div class="container">
 
-  <div class="bookCards"></div>
+    <div class="bookCards"></div>
+  
+    <button id="addBookButton">Add Book to List</button>
+  
+  
+    <form class="newBookForm">
+      <label for="bookTitle">Title</label>
+      <input id="bookTitle" type="text">
+  
+      <label for="bookAuthor">Author</label>
+      <input id="bookAuthor" type="text">
+  
+      <label for="bookPages">Number of Pages</label>
+      <input id="bookPages" type="text">
+  
+      <label for="bookReadStatus">Already Read?</label>
+      <select id="bookReadStatus" name="bookReadStatus">
+        <option value="true">Read</option>
+        <option value="false">Not Read</option>
+      </select>
+  
+      <button type="button" id="formSubmitButton">Submit</button>
+    </form>
+  
+    <script src="script.js"></script>
 
-  <button id="addBookButton">Add Book to List</button>
-
-
-  <form class="newBookForm">
-    <label for="bookTitle">Title</label>
-    <input id="bookTitle" type="text">
-
-    <label for="bookAuthor">Author</label>
-    <input id="bookAuthor" type="text">
-
-    <label for="bookPages">Number of Pages</label>
-    <input id="bookPages" type="text">
-
-    <label for="bookReadStatus">Already Read?</label>
-    <select id="bookReadStatus" name="bookReadStatus">
-      <option value="true">Read</option>
-      <option value="false">Not Read</option>
-    </select>
-
-    <button type="button" id="formSubmitButton">Submit</button>
-  </form>
-
-  <script src="script.js"></script>
+    </div>
 </body>
 </html>

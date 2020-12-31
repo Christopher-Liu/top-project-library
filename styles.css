@@ -1,3 +1,8 @@
+.container{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
 .bookCards{
     display: flex;
     justify-content: flex-start;
@@ -5,5 +10,16 @@
 }
 
 .bookCard{
+    display: block;
+    padding: 5px 10px;
+}
+
+.newBookForm{
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.newBookForm input, .newBookForm button{
+    width: 100%;
     display: block;
 }
