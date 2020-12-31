@@ -12,6 +12,12 @@
 .bookCard{
     display: block;
     padding: 5px 10px;
+    text-align: center;
+}
+
+.bookCard button{
+    display: block;
+    margin: 0 auto;
 }
 
 .newBookForm{
