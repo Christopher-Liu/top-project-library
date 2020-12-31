@@ -65,14 +65,17 @@ function populateBookCardsHolder(libraryArray) {
 
         let bookCardReadStatusButton = document.createElement('button');
         bookCardReadStatusButton.textContent = book.read ? "Mark Unread" : "Mark Read";
+        bookCardReadStatusButton.style.backgroundColor = book.read ? "#ff6161" : "#69ffbb";
         bookCardReadStatusButton.classList.add('bookCardReadStatusButton');
         bookCardReadStatusButton.addEventListener('click', () => {
             if (book.read) {
                 book.read = false;
                 bookCardReadStatusButton.textContent = "Mark Read";
+                bookCardReadStatusButton.style.backgroundColor = "#ff6161";
             } else {
                 book.read = true;
-                bookCardReadStatusButton.textContent = "Mark Unread"
+                bookCardReadStatusButton.textContent = "Mark Unread";
+                bookCardReadStatusButton.style.backgroundColor = "#69ffbb";
             }
 
             populateBookCardsHolder(myLibrary);
