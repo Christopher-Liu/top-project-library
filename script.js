@@ -108,6 +108,7 @@ document.getElementById("addBookButton").addEventListener('click', () => {
 document.getElementById("formSubmitButton").addEventListener('click', () => {
     addBookToLibrary(myLibrary);
     populateBookCardsHolder(myLibrary);
+    document.getElementById("addBookButton").click();
 });
 
 
