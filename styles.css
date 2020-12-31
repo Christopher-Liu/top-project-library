@@ -12,12 +12,18 @@
 .bookCard{
     display: block;
     padding: 5px 10px;
+    margin: 5px 10px;
+    width: 180px;
+    border-radius: 10px;
     text-align: center;
+    background-color: #fff7d1;
 }
 
 .bookCard button{
     display: block;
     margin: 0 auto;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
 
 .newBookForm{
