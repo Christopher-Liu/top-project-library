@@ -7,11 +7,6 @@ function Book(title, author, pages, read){
     this.read = read
 }
 
-Book.prototype.info = function info() {
-    let phrase = this.read ? 'already read' : 'not read yet';
-    console.log(this.title + ' by ' + this.author + ', ' + this.pages + ' pages, ' + phrase)
-};
-
 
 function addBookToLibrary(libraryArray) {
 
@@ -26,7 +21,13 @@ function addBookToLibrary(libraryArray) {
 
 }
 
-
+// This function could use some refactoring? Not sure if we can 
+// break it up into constituent functions.
+//
+// One of the more inefficient things being done is that all bookcards
+// are re-created whenever any books are added in or deleted from the
+// list- need to consider how I can remove or add in new cards without
+// having to recreate all cards on screen.
 function populateBookCardsHolder(libraryArray) {
     
     let bookCardsHolder = document.querySelector(".bookCards");
